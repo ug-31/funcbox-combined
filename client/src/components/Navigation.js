@@ -12,12 +12,12 @@ const Navigation = ({ setAuth, isAuthenticated }) => {
   return (
     <Fragment>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a className="navbar-brand" href="/funcbox-client-deploy/#/dashboard">
+        <a className="navbar-brand" href="/dashboard">
           Dashboard
         </a>
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a className="nav-link" href="/funcbox-client-deploy/#/bucket">
+            <a className="nav-link" href="/bucket">
               Bucket <span className="sr-only">(current)</span>
             </a>
           </li>
@@ -31,17 +31,14 @@ const Navigation = ({ setAuth, isAuthenticated }) => {
           <ul className="nav navbar-nav ml-auto">
             <li className="nav-item active">
               {!isAuthenticated === true && (
-                <a className="nav-link" href="/funcbox-client-deploy/#/login">
+                <a className="nav-link" href="/login">
                   Login <span className="sr-only">(current)</span>
                 </a>
               )}
             </li>
             <li className="nav-item active">
               {!isAuthenticated === true && (
-                <a
-                  className="nav-link"
-                  href="/funcbox-client-deploy/#/register"
-                >
+                <a className="nav-link" href="/register">
                   Register
                 </a>
               )}

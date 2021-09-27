@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { Fragment, useState, useEffect } from "react";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
@@ -27,13 +27,10 @@ function App() {
 
   const isAuth = async () => {
     try {
-      const response = await fetch(
-        "https://ug31-funcbox-server.herokuapp.com/auth/verify",
-        {
-          method: "GET",
-          headers: { token: localStorage.token },
-        }
-      );
+      const response = await fetch("http://localhost:5000/auth/verify", {
+        method: "GET",
+        headers: { token: localStorage.token },
+      });
 
       const parseRes = await response.json();
 

@@ -6,13 +6,10 @@ const ListBucket = ({ isAuthenticated }) => {
 
   const getBuckets = async () => {
     try {
-      const response = await fetch(
-        "https://ug31-funcbox-server.herokuapp.com/dashboard/bucket",
-        {
-          method: "GET",
-          headers: { token: localStorage.token },
-        }
-      );
+      const response = await fetch("http://localhost:5000/dashboard/bucket", {
+        method: "GET",
+        headers: { token: localStorage.token },
+      });
 
       const parseRes = await response.json();
 

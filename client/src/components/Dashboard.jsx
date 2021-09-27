@@ -18,13 +18,10 @@ const Dashboard = () => {
 
   const getName = async () => {
     try {
-      const response = await fetch(
-        "https://ug31-funcbox-server.herokuapp.com/dashboard/",
-        {
-          method: "GET",
-          headers: { token: localStorage.token },
-        }
-      );
+      const response = await fetch("http://localhost:5000/dashboard/", {
+        method: "GET",
+        headers: { token: localStorage.token },
+      });
 
       const parseRes = await response.json();
 
@@ -38,17 +35,14 @@ const Dashboard = () => {
     e.preventDefault();
     try {
       const body = { bname, text };
-      const response = await fetch(
-        "https://ug31-funcbox-server.herokuapp.com/dashboard",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            token: localStorage.token,
-          },
-          body: JSON.stringify(body),
-        }
-      );
+      const response = await fetch("http://localhost:5000/dashboard", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          token: localStorage.token,
+        },
+        body: JSON.stringify(body),
+      });
 
       const parseRes = await response.json();
 
