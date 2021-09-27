@@ -1,6 +1,6 @@
 # funcbox-combined
 
-## Authentication tech used : JWT Frontend : REACTJS  DATABASE : MONGODB
+## Authentication tech used : JWT, Frontend : REACTJS,  Database : MONGODB
 
 There are two folder Server and Client
 
